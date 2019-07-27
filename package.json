@@ -1,0 +1,20 @@
+{
+  "name": "johnwatson",
+  "version": "1.0.0",
+  "description": "this is a resoume template!",
+  "main": "entry.js",
+  "directories": {
+    "lib": "lib"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "mahdiyar anari",
+  "license": "MIT",
+  "dependencies": {
+    "bootstrap": "^4.3.1"
+  },
+  "devDependencies": {
+    "browserify-css": "^0.15.0"
+  }
+}

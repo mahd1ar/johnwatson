@@ -7,7 +7,7 @@
     "lib": "lib"
   },
   "scripts": {
-    "sass": "sass css/bootstrap/bootstrap.scss:bootstrap.css css/style.scss:style.css --watch"
+    "sass": "sass css/style.scss css/style.css --watch"
   },
   "author": "mahdiyar anari",
   "license": "MIT",

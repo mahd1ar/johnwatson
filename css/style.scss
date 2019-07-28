@@ -1,0 +1,36 @@
+@import './bootstrap/bootstrap.scss';
+
+
+#profile{
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    transform: translateY(75px)
+}
+.skill-comp{
+  display: flex;
+  align-items: baseline;
+    p{
+        flex: 1;
+        display: inline-block;
+    }
+    div.progress{
+        flex: 2;
+        display: inline-flex;
+    }
+}
+
+#contact{
+    ul{
+        margin-bottom: 0;
+        i{
+            font-size: 1.2rem;
+        }
+    }
+}
+
+body {
+  background-color: #ccc;
+}
+
+

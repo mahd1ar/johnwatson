@@ -7,14 +7,10 @@
     "lib": "lib"
   },
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "sass": "sass css/bootstrap/bootstrap.scss:bootstrap.css css/style.scss:style.css --watch"
   },
   "author": "mahdiyar anari",
   "license": "MIT",
-  "dependencies": {
-    "bootstrap": "^4.3.1"
-  },
-  "devDependencies": {
-    "browserify-css": "^0.15.0"
-  }
+  "dependencies": {},
+  "devDependencies": {}
 }

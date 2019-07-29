@@ -1,7 +1,8 @@
 #  john watson
 
-**این پروزه برای مجموعه کمان99 ساخته شده**
+## Online resume
 
+**این پروزه برای مجموعه کمان99 ساخته شده**
 **[see preview here](https://happy-clarke-87f7c6.netlify.com/)** 
 ###  how to install
 برای نصب ابتدا پروژه را کلون کنید
@@ -27,3 +28,5 @@ sass برای کامپایل کردن فایل
 برای باندل کردن کامپوننت های ویو جی اس
 
     npm run bundle
+  خوانده می شود fake rest api     اطلاعات پروفایل از
+ساخته شده است  svg با استفاده از pre loader

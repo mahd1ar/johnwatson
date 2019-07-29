@@ -1,16 +1,22 @@
 {
-  "name": "johnwatson",
-  "version": "1.0.0",
-  "description": "this is a resoume template!",
-  "main": "entry.js",
-  "directories": {
-    "lib": "lib"
-  },
-  "scripts": {
-    "sass": "sass css/style.scss css/style.css --watch"
-  },
-  "author": "mahdiyar anari",
-  "license": "MIT",
-  "dependencies": {},
-  "devDependencies": {}
+    "name": "johnwatson",
+    "version": "1.0.0",
+    "description": "this is a resoume template!",
+    "main": "entry.js",
+    "directories": {
+        "lib": "lib"
+    },
+    "scripts": {
+        "sass": "npx sass css/style.scss css/style.css",
+        "bundle": " npx parcel js/index.js"
+    },
+    "author": "mahdiyar anari",
+    "license": "MIT",
+    "dependencies": {
+        "axios": "^0.19.0"
+    },
+    "devDependencies": {
+        "parcel": "^1.12.3",
+        "sass": "^1.22.7"
+    }
 }

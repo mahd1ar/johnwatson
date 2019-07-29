@@ -1,1 +1,28 @@
-# johnwatson
+#  john watson
+
+**این پروزه برای مجموعه کمان99 ساخته شده**
+
+###  how to install
+برای نصب ابتدا پروژه را کلون کنید
+
+    git clone https://github.com/mahd1ar/johnwatson.git
+
+و بعد بسته های وابسته را نصب کنید 
+
+    npm install
+###  Dependencies :
+
+ - axios
+ - vue.js
+ - bootstrap.css
+
+ ### Dev dependencies:
+ - sass
+ - parcel
+
+sass برای کامپایل کردن فایل 
+
+    npm run sass
+برای باندل کردن کامپوننت های ویو جی اس
+
+    npm run bundle

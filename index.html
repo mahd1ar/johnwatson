@@ -6,16 +6,37 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Document</title>
+    <!-- fontawesome -->
     <script src="https://kit.fontawesome.com/923e628944.js"></script>
+    <!-- stylesheet -->
     <link rel="stylesheet" href="css/style.css">
-    <link rel="stylesheet" href="debug.css">
+
 </head>
 
-<body debu>
+<body>
+    <div class="sp-cont">
+
+        <div class="spinner">
+            <svg viewbox="0 0 66 66" xmlns="http://www.w3.org/2000/svg">
+                <circle class="length" fill="none" stroke-width="8" stroke-linecap="round" cx="33" cy="33" r="28">
+                </circle>
+            </svg>
+            <svg viewbox="0 0 66 66" xmlns="http://www.w3.org/2000/svg">
+                <circle fill="none" stroke-width="8" stroke-linecap="round" cx="33" cy="33" r="28"></circle>
+            </svg>
+            <svg viewbox="0 0 66 66" xmlns="http://www.w3.org/2000/svg">
+                <circle fill="none" stroke-width="8" stroke-linecap="round" cx="33" cy="33" r="28"></circle>
+            </svg>
+            <svg viewbox="0 0 66 66" xmlns="http://www.w3.org/2000/svg">
+                <circle fill="none" stroke-width="8" stroke-linecap="round" cx="33" cy="33" r="28"></circle>
+            </svg>
+        </div>
+
+    </div>
+
     <div class="container" id="main-container">
         <div class="row bg-my-showcase text-light">
-            <img id="profile" src="profile.jpg" alt=""
-                class="offset-md-1">
+            <img id="profile" :src="getPicAddress()" alt="" class="offset-md-1">
             <div class="bg-transparent col-md-6 offset-md-1 " style="align-self: flex-end">
                 <h1>john watson</h1>
                 <p class="lead">graphic designer</p>
@@ -25,155 +46,54 @@
         <div class="row bg-white">
             <div class="col-md-4 ml-2">
                 <section id="personal">
-                    <h3 class="text-primary">personal</h3>
+                    <h3 class="text-primary mb-3">personal</h3>
                     <table class="table table-borderless">
                         <tbody>
-                            <tr>
-                                <td>birthday:</td>
-                                <td>john</td>
-                            </tr>
-                            <tr>
-                                <td>relationship</td>
-                                <td>s</td>
-                            </tr>
-                            <tr>
-                                <td>Jacob</td>
-                                <td>Thornton</td>
-                            </tr>
+
+                            <personal v-if="Personal" v-for="(item, index) in Personal" :key="index" :info="index"
+                                :val="item"></personal>
+
                         </tbody>
                     </table>
                 </section>
                 <hr>
                 <section>
                     <h3 class="text-primary">skills</h3>
+                    <skill v-for="(s,i) in Skills" :key="i" :skill="i" :pers="s"></skill>
 
-                    <div class="skill-comp">
-                        <p class="text-uppercase">teamwork</p>
-                        <div class="progress" style="height: 5px;">
-                            <div class="progress-bar bg-dark" role="progressbar" style="width: 25%;" aria-valuenow="25"
-                                aria-valuemin="0" aria-valuemax="100"></div>
-                        </div>
-                    </div>
-                    <div class="skill-comp">
-                        <p class="text-uppercase">html5</p>
-                        <div class="progress" style="height: 5px;">
-                            <div class="progress-bar bg-dark" role="progressbar" style="width: 75%;" aria-valuenow="25"
-                                aria-valuemin="0" aria-valuemax="100"></div>
-                        </div>
-                    </div>
                 </section>
                 <hr>
                 <section id="contact">
                     <h3 class="text-primary">contact</h3>
-                    <ul class="list-inline ml-2 mt-3">
-                        <i class="fas fa-phone-alt list-inline-item"></i>
-                        <p class="list-inline-item text-muted">+98333</p>
-                    </ul>
-                    <ul class="list-inline ml-2 mt-0">
-                        <i class="fas fa-envelope-open list-inline-item"></i>
-                        <p class="list-inline-item text-muted">a.mahdiyar7@yahoo.com</p>
-                    </ul>
-                    <ul class="list-inline ml-2 mt-0">
-                        <i class="fas fa-globe list-inline-item"></i>
-                        <p class="list-inline-item text-muted">yahoo.com</p>
-                    </ul>
-                    <ul class="list-inline ml-2 mt-0">
-                        <i class="fas fa-map-marker-alt list-inline-item"></i>
-                        <p class="list-inline-item text-muted ">22 jump streat</p>
-                    </ul>
+
+                    <contact v-if="Contact" :tel="Contact.Tel" :email="Contact.Email" :address="Contact.Address"
+                        :website="Contact.Website"></contact>
+
+
+
                 </section>
             </div>
             <div class="col-md-7 border-left">
                 <div class="container mt-3">
                     <h3 class="text-primary text-uppercase">profile</h3>
                     <p class="blockquote">
-                        <b>i'm jonh watson</b>
-                        Lorem ipsum dolor sit amet consectetur, adipisicing elit. Dicta ratione in pariatur neque?
-                        Cumque, repellat magni voluptatum sed perferendis accusamus
-                        Lorem ipsum, dolor sit amet consectetur adipisicing elit. Odio cupiditate molestias soluta culpa
-                        earum perspiciatis neque dolorum. Facere magni libero amet, nulla rerum nobis, maxime qui
-                        consequatur numquam provident eos.
+                        <b>i'm {{Name}}</b>
+                        {{Profile}}
                     </p>
                 </div>
                 <hr>
-                <div class="container mt-3">
-                    <h3 class="text-primary text-capitalize">education</h3>
-                    <div class="d-flex flex-row flex-wrap  p-2">
 
-                        <div class="w-50">
-                            <h4 class="text-capitalize">graphic design</h4>
-                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Mollitia dicta facere provident.
-                            </p>
-                        </div>
+                <education :education="Education"></education>
 
-                        <div class="w-50">
-                            <h4 class="text-capitalize">graphic design</h4>
-                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Mollitia dicta facere provident.
-                            </p>
-                        </div>
-
-                        <div class="w-50">
-                            <h4 class="text-capitalize">graphic design</h4>
-                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Mollitia dicta facere provident.
-                            </p>
-                        </div>
-
-                    </div>
-                </div>
                 <hr>
-                <div class="container mt-3">
-                    <h3 class="text-primary text-capitalize mb-4">exprience</h3>
-
-
-                    <div class="ex-item">
-                        <div class="d-flex flex-wrap justify-content-between p-2">
-                            <h4>jounior mroject manager</h4>
-                            <p class="">mar 2012 jun 2014</p>
-                        </div>
-                        <p class="lead">
-                            Lorem ipsum dolor, sit amet consectetur adipisicing elit. Officia, iste eligendi fugiat,
-                            sunt dolore natus minus officiis amet tempore optio ex provident, harum magnam ea at saepe
-                            cupiditate asperiores vitae ab modi repellat. Dolore, quibusdam.
-                        </p>
-                    </div>
-
-
-                </div>
+                <xp :xp="Experience"></xp>
                 <hr>
-                <div class="container mt-3">
-                    <h3 class="text-primary text-capitalize mb-3">refrence</h3>
-
-
-                    <div class="ref">
-                        <div class="d-flex flex-wrap justify-content-between p-2">
-                    
-
-                            <div>
-                                <p class="h4">michael johns</p>
-                                <p class="text-muted h5">manager/compony</p>
-                                <ul class="list-unstyled bg-white">
-                                    <li><b>T.</b> 091021184613</li>
-                                    <li><b>E.</b> 091021184613</li>
-                                </ul>
-                            </div>
-                            <div>
-                                <p class="h4">michael johns</p>
-                                <p class="text-muted h5">manager/compony</p>
-                                <ul class="list-unstyled bg-white">
-                                    <li><b>T.</b> 091021184613</li>
-                                    <li><b>E.</b> 091021184613</li>
-                                </ul>
-                            </div>
-
-
-                        </div>
-                    </div>
-
-
-                </div>
+                <ref :refr="Reference"></ref>
             </div>
         </div>
     </div>
+
+    <!-- <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script> -->
     <!-- bootstrap -->
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
         integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
@@ -184,7 +104,12 @@
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
         integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
         crossorigin="anonymous"></script>
+    <!-- vuejs -->
+    <script src="https://unpkg.com/vue"></script>
+    <script src="https://unpkg.com/http-vue-loader"></script>
+
     <script src="dist/index.js"></script>
+
 </body>
 
 </html>

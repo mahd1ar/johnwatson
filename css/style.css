@@ -9831,28 +9831,28 @@ svg {
   transform: rotate(-90deg);
 }
 svg:nth-child(1) circle {
-  stroke: #84ebbd;
+  stroke: #D4F5F5;
   stroke-dasharray: 1, 300;
   stroke-dashoffset: 0;
   animation: strokeanim 3s calc(0.2s * (1)) ease infinite;
   transform-origin: center center;
 }
 svg:nth-child(2) circle {
-  stroke: #4977ec;
+  stroke: #556B79;
   stroke-dasharray: 1, 300;
   stroke-dashoffset: 0;
   animation: strokeanim 3s calc(0.2s * (2)) ease infinite;
   transform-origin: center center;
 }
 svg:nth-child(3) circle {
-  stroke: #f6bb67;
+  stroke: #8C9A9E;
   stroke-dasharray: 1, 300;
   stroke-dashoffset: 0;
   animation: strokeanim 3s calc(0.2s * (3)) ease infinite;
   transform-origin: center center;
 }
 svg:nth-child(4) circle {
-  stroke: #333841;
+  stroke: #93B7BE;
   stroke-dasharray: 1, 300;
   stroke-dashoffset: 0;
   animation: strokeanim 3s calc(0.2s * (4)) ease infinite;

@@ -2,6 +2,7 @@
 
 **این پروزه برای مجموعه کمان99 ساخته شده**
 
+**[see preview here](https://happy-clarke-87f7c6.netlify.com/)** 
 ###  how to install
 برای نصب ابتدا پروژه را کلون کنید
 

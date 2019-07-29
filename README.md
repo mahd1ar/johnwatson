@@ -1,6 +1,4 @@
-#  john watson
-
-## Online resume
+#  john watson (Online resume)
 
 **این پروزه برای مجموعه کمان99 ساخته شده**
 **[see preview here](https://happy-clarke-87f7c6.netlify.com/)** 
